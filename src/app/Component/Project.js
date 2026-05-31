@@ -25,18 +25,18 @@ export default function Project() {
     return (
 
         <div id='project' className='px-5 sm:px-10 lg:px-15 mt-15'>
-            <h1 className='text-center font-bold md:text-4xl text-xl py-5'>My Recent Works</h1>
-            <div className={`flex items-center justify-center gap-5  ${mode === 'dark' ? 'text-zinc-400' : "text-zinc-600"} `}>
+            <h1 data-aos="fade-up" data-aos-duration="1000" className='text-center font-bold md:text-4xl text-xl py-5'>My Recent Works</h1>
+            <div data-aos="fade-up" data-aos-duration="1500" className={`flex items-center justify-center gap-5  ${mode === 'dark' ? 'text-zinc-400' : "text-zinc-600"} `}>
                 <button onClick={() => setProjectValue("all")} className={`${projectvalue === 'all' ? 'text-red-500' : ''} text-xl cursor-pointer transition-all duration-300`}>All works</button>
 
                 <button onClick={() => setProjectValue("react")} className={`${projectvalue === 'react' ? 'text-red-500' : ''} text-xl cursor-pointer transition-all duration-300`}>React</button>
                 <button onClick={() => setProjectValue("next")} className={`${projectvalue === 'next' ? 'text-red-500' : ''} text-xl cursor-pointer transition-all duration-300`}>Next</button>
             </div>
             {/* project section */}
-            <div className=' mx-10  px-0 sm:px-5 md:px-10 mt-15 '>
-                <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 '>
+            <div  className=' mx-10  px-0 sm:px-5 md:px-10 mt-15 '>
+                <div  className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 '>
                     {filterprojects.map((item) => (
-                        <div key={item.id} className={`   border-2 border-blue-500/30 shadow-[0_0_20px_rgba(59,130,246,0.6)] cursor-pointer flex flex-col justify-center items-center py-5  rounded-xl  transition-all duration-300 hover:border-blue-500 hover:shadow-[0_0_25px_rgba(59,130,246,0.7)]`}>
+                        <div data-aos="fade-up" data-aos-duration="2000" key={item.id} className={`   border-2 border-blue-500/30 shadow-[0_0_20px_rgba(59,130,246,0.6)] cursor-pointer flex flex-col justify-center items-center py-5  rounded-xl  transition-all duration-300 hover:border-blue-500 hover:shadow-[0_0_25px_rgba(59,130,246,0.7)]`}>
                             <Image width={250} height={100} src={item.img} alt='logo' className='object-cover rounded-md h-auto w-60' />
                             <h4 className='text-lg font-semibold mt-3'>{item.name}</h4>
                             <div className='mt-5 flex items-center justify-between gap-5' >

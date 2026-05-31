@@ -36,15 +36,15 @@ export default function Footer() {
 
     ]
     return (
-        <div id='skill' className={`px-5 sm:px-10 lg:px-15 mt-15 ${mode === 'dark' ? "bg-white text-zinc-800" : "bg-zinc-800 text-white"} h-auto py-5  sm:h-50 flex flex-col items-center justify-center  `}>
+        <div data-aos="fade-up" data-aos-duration="1000"   id='skill' className={`px-5 sm:px-10 lg:px-15 mt-15 ${mode === 'dark' ? "bg-white text-zinc-800" : "bg-zinc-800 text-white"} h-auto mt-5  flex flex-col items-center justify-center  `}>
             {/* socials link */}
-            <div className='w-full text-center '>
+            <div  className='w-full text-center mt-5 '>
                 <div className='flex items-center justify-center gap-2 sm:gap-5'>
 
                     {socailinks.map((item, index) => {
                         const SocialIcon = item.icon;
                         return (
-                            <Link href={item.socaillink} key={index} className={`w-12 h-12 ${mode === 'dark' ? "bg-zinc-800 text-white hover:bg-white hover:border hover:text-black" : "bg-white hover:bg-zinc-800 hover:border hover:text-white text-black"} rounded-full flex items-center justify-center  cursor-pointer transition-all duration-300 `}>
+                            <Link  href={item.socaillink} key={index} className={`w-12 h-12 ${mode === 'dark' ? "bg-zinc-800 text-white hover:bg-white hover:border hover:text-black" : "bg-white hover:bg-zinc-800 hover:border hover:text-white text-black"} rounded-full flex items-center justify-center  cursor-pointer transition-all duration-300 `}>
                                 <SocialIcon size={25} />
                             </Link>
                         )
@@ -56,15 +56,15 @@ export default function Footer() {
             {/* nav links */}
             <div className='flex gap-1 flex-wrap xl:gap-5 mt-5'>
                 {navlinks.map((items, index) => (
-                    <div key={index}>
-                        <Link href={items.url} className={`font-semibold text-xl cursor-pointer p-2 hover:text-zinc-600 rounded-md`} >{items.name}</Link>
+                    <div  key={index}>
+                        <Link  href={items.url} className={`font-semibold text-xl cursor-pointer p-2 hover:text-zinc-600 rounded-md`} >{items.name}</Link>
                     </div>
                 ))}
 
 
             </div>
 
-            <h1 className={`text-md ${mode === 'dark' ? "text-zinc-400" : "text-zinc-600"} mt-3 font-light `}>  &copy; {new Date().getFullYear()} Mukesh Kumar Chaudhary. All rights reserved.</h1>
+            <h1  className={`text-md ${mode === 'dark' ? "text-zinc-400" : "text-zinc-600"} mt-3 mb-5 font-light `}>  &copy; {new Date().getFullYear()} Mukesh Kumar Chaudhary. All rights reserved.</h1>
 
         </div >
     )
