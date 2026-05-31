@@ -59,7 +59,7 @@ export default function Navbar() {
                 <div className='flex items-center justify-center gap-1   lg:gap-5'>
                     {/* button download cv */}
                     <div className='bg-linear-to-b from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-500 cursor-pointer p-2 rounded-md  items-center justify-center font-semibold hidden  md:flex  text-white '>
-                        <Link href='/files/resume.pdf' download>DownLoad CV</Link>
+                        <Link href='/files/MukeshCV.pdf' download>DownLoad CV</Link>
                     </div>
                     <div className='flex gap-2'>
                         <h1 className='hidden lg:block'> {mode === 'dark' ? "Dark" : "Light"}</h1>
