@@ -7,7 +7,7 @@ import { ThemeContext } from '../Context/ThemeContext'
 export default function Hero() {
     const { mode } = useContext(ThemeContext)
     return (
-        <div id='/' className='px-5 sm:px-10 lg:px-15 xl:px-30 py-16 '>
+        <div id='#home' className='px-5 sm:px-10 lg:px-15 xl:px-30 py-16 '>
             <div className='flex flex-col md:flex-row items-center justify-between h-auto md:h-100   mt-16   w-full gap-5'>
                 {/* content section */}
                 <div className=' flex-1 '>

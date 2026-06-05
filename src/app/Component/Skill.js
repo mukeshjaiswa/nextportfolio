@@ -67,7 +67,7 @@ const skillsdata = [
     },
     {
         name: "Firebase",
-        lang: "CSS framework",
+        lang: " Database",
         img: '/firebase.png',
 
     },

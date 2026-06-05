@@ -33,15 +33,15 @@ export default function Project() {
                 <button onClick={() => setProjectValue("next")} className={`${projectvalue === 'next' ? 'text-red-500' : ''} text-xl cursor-pointer transition-all duration-300`}>Next</button>
             </div>
             {/* project section */}
-            <div  className=' mx-10  px-0 sm:px-5 md:px-10 mt-15 '>
-                <div  className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 '>
+            <div className=' mx-10  px-0 sm:px-5 md:px-10 mt-15 '>
+                <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 '>
                     {filterprojects.map((item) => (
                         <div data-aos="fade-up" data-aos-duration="2000" key={item.id} className={`   border-2 border-blue-500/30 shadow-[0_0_20px_rgba(59,130,246,0.6)] cursor-pointer flex flex-col justify-center items-center py-5  rounded-xl  transition-all duration-300 hover:border-blue-500 hover:shadow-[0_0_25px_rgba(59,130,246,0.7)]`}>
                             <Image width={250} height={100} src={item.img} alt='logo' className='object-cover rounded-md h-auto w-60' />
                             <h4 className='text-lg font-semibold mt-3'>{item.name}</h4>
                             <div className='mt-5 flex items-center justify-between gap-5' >
-                                <Link href={item.github} className=' p-3 md:p-2 lg:p-5  rounded-md cursor-pointer  transition-all duration-300 border-2 hover:border-blue-600 sm:text-xl text-md '>GitHub</Link>
-                                <Link href={item.live} className='p-3 md:p-2 lg:p-5 sm:text-xl text-md  rounded-md cursor-pointer  transition-all duration-300 border-2 hover:border-blue-600 '>Live Demo</Link>
+                                <Link href={item.github} target='_blank' className=' p-3 md:p-2 lg:p-5  rounded-md cursor-pointer  transition-all duration-300 border-2 hover:border-blue-600 sm:text-xl text-md '>GitHub</Link>
+                                <Link href={item.live} target='_blank' className='p-3 md:p-2 lg:p-5 sm:text-xl text-md  rounded-md cursor-pointer  transition-all duration-300 border-2 hover:border-blue-600 '>Live Demo</Link>
                             </div>
                         </div>
                     ))}
@@ -56,6 +56,15 @@ export default function Project() {
 const works = [
     {
         id: 1,
+        name: "Todo List",
+        img: "/projectimages/todolist.png",
+        github: "https://github.com/mukeshjaiswa/todo",
+        live: "https://mukesh-todolist.vercel.app/",
+        language: 'next'
+
+    },
+    {
+        id: 2,
         name: "Weather app",
         img: "/projectimages/weather.png",
         github: "https://github.com/mukeshjaiswa/Weather-",
@@ -65,7 +74,7 @@ const works = [
     },
 
     {
-        id: 2,
+        id: 3,
         name: "Currency Convertor",
         img: "/projectimages/currencyconvertor.png",
         github: "https://github.com/mukeshjaiswa/Currencyconvertor",
@@ -74,7 +83,7 @@ const works = [
 
     },
     {
-        id: 3,
+        id: 4,
         name: "Resturant app",
         img: "/projectimages/resturant.png",
         github: "https://github.com/mukeshjaiswa/resturant",
@@ -83,7 +92,7 @@ const works = [
 
     },
     {
-        id: 4,
+        id: 5,
         name: "Blog app",
         img: "/projectimages/blogs.png",
         github: "https://github.com/mukeshjaiswa/blog",
@@ -92,7 +101,7 @@ const works = [
 
     },
     {
-        id: 5,
+        id: 6,
         name: "Real Estate",
         img: "/projectimages/realestate.png",
         github: "https://github.com/mukeshjaiswa/real-estate",
@@ -101,7 +110,7 @@ const works = [
 
     },
     {
-        id: 6,
+        id: 7,
         name: "Job Portal",
         img: "/projectimages/jobportal.png",
         github: "https://github.com/mukeshjaiswa/Jobportal",
@@ -110,7 +119,7 @@ const works = [
 
     },
     {
-        id: 7,
+        id: 8,
         name: "T-sewa",
         img: "/projectimages/t-sewa.png",
         github: "https://github.com/mukeshjaiswa/t-sewa",
